@@ -1,0 +1,9 @@
+#header { display:flex; flex-direction: column; }
+#header h1 { display:none; margin:0; }
+#header .name { order:1; display:block; font-size:xx-large; font-variant:small-caps; border-bottom:1px solid grey; }
+#header .email { order:2; display:inline-block; }
+#header .phone { order:2; display:inline-block; }
+#header .address { order:3; }
+
+#education { font-size:xx-large; font-variant:small-caps; }
+#education .education { color:black; font-variant:normal; }
