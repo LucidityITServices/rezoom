@@ -25,7 +25,7 @@ if(isset($_POST['submit']) && $_POST['submit']=="submit") {
         }
     }
     else {
-        //login failed
+        echo "Username and/or password incorrect.";
     }
 
     mysqli_close($link);
