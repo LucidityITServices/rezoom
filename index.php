@@ -67,7 +67,7 @@
 			<section id="two" class="wrapper style2 alt">
 				<div class="inner">
 				    <h2>Templates</h2>
-					<div style="display:inline-flex; width:100%; flex-wrap:wrap; margin-bottom:20px;">
+					<div style="display:inline-flex; width:100%; flex-wrap:wrap; margin-bottom:20px; justify-content:center; ">
 						<div class="spotlight">
 							<div class="image">
 								<img src="images/pic01.jpg" alt="" />
