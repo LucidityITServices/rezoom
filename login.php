@@ -1,16 +1,17 @@
 <?php
 
-if(isset($_SESSION['id'])) {
-    header('Location: http://www.rezoom.com/');
+include("login-info.php");
+
+if(isset($_SESSION['id'])) { 
+    header('Location: https://rezoom.lucidity.net/');
 }
 
 if(isset($_POST['submit']) && $_POST['submit']=="submit") {
-    $link = new mysqli("localhost", "root", "", "rezoom");
+    $link = new mysqli($host, $user, $pass, $db);
 
     if (!$link) {
-        echo "Error: Unable to connect to MySQL." . PHP_EOL;
-        echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-        echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+        error_log("Error: Unable to connect to MySQL.". date("m-d-y g:i a")); //mm-dd-yy hh:mm am/pm
+        header('Location: /rezoom/404.htm');
         exit;
     }
 
@@ -23,6 +24,7 @@ if(isset($_POST['submit']) && $_POST['submit']=="submit") {
             $_SESSION['username'] = $row['username'];
             $_SESSION['id'] = $row['id'];
         }
+        header('Location: /rezoom/main.php');
     }
     else {
         echo "Username and/or password incorrect.";
