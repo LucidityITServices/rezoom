@@ -2,6 +2,7 @@
     session_start();
 ?>
 <html>
+<meta charset="UTF-8">
 <head>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -26,6 +27,7 @@
     </script>
 
     <style>
+        body { padding: 0 10px; }
         header { display:block; height:75px; }
         nav a { display:inline-block; text-align:center; color:red; float:right; }
         nav a:hover { text-decoration:none; color:darkred; }
@@ -35,27 +37,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <img src="" /> <!-- logo -->
-            <a href="profile.php"><i class="fas fa-question-circle fa-3x"></i><span>FAQ</span></a>
-            <?php
-                if(isset($_SESSION['id'])) {
-                    ?>
-                        <a href="profile.php"><i class="fas fa-user-circle fa-3x"></i><span>Profile</span></a>
-                        <a href="logout.php"><i class="fas fa-sign-out-alt fa-3x"></i><span>Logout</span></a>
-                    <?php
-                }
-                else {
-                    ?>
-                        <a href="register.php"><i class="fas fa-user-plus fa-3x"></i><span>Register</span></a>
-                        <a href="login.php"><i class="fas fa-sign-in-alt fa-3x"></i><span>Login</span></a>
-                    <?php
-                }
-            ?>
-            
-        </nav>
-    </header>
+    <?php include header.php ?>
     <hr/>
     <section id="about">
         <h1>What's this all about?</h1>
