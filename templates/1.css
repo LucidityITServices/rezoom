@@ -1,9 +1,10 @@
-#header { display:flex; flex-direction: column; }
+body { padding:0 20px; }
+#header { display:flex; flex-direction: column; text-align:center; }
 #header h1 { display:none; margin:0; }
-#header .name { order:1; display:block; font-size:xx-large; font-variant:small-caps; border-bottom:1px solid grey; }
-#header .email { order:2; display:inline-block; }
-#header .phone { order:2; display:inline-block; }
-#header .address { order:3; }
+#header .name { display:block; text-align:center; width:100%; font-size:xx-large; font-weight:bold; font-variant:small-caps; border-bottom:1px solid grey; }
+#header .email { display:inline-block; }
+#header .phone { display:inline-block; }
+#header .address { }
 
-#education { font-size:xx-large; font-variant:small-caps; }
-#education .education { color:black; font-variant:normal; }
+h1 { background-color:#650095; color:white; padding-left:20px; }
+#jobs .jobs, #certifications .certification, #about .about, #smedia .smedia { padding-left:20px; }

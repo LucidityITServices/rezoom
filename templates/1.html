@@ -1,0 +1,54 @@
+<body>
+    <div id="header">
+        <h1>Personal Info</h1>
+
+        <div class='name'>{{ name.infoValue }} {{ name_family }}</div>
+        <div class='email'>{{ email.email }}</div>
+        <div class='phone'> {{ phone }}</div>
+        <div class='address'>
+                {{ address.address1 }}<br/>
+                {{ address.address2 }}<br/>
+                {{ address.address3 }}<br/>
+                {{ address.address4 }}<br/>
+                {{ address.address5 }}<br/>
+        </div>
+    </div>
+    <div id="education">
+        <h1>Education</h1>
+        {% for degree in degrees %}
+            <div class='education'>
+                {{ education.institution }}
+                {{ education.start }} - {{ education.end }}<br/>
+                {{ education.degree }} in {{ education.subject }}<br/>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div id="jobs">
+        <h1>Jobs</h1>
+        {% for job in jobs %}
+            <div class='jobs'>";
+                {{ job.title }}<br/>
+                {{ job.company }}<br/>
+                {{ job.start }} - {{ job.end }}<br/>
+                <ul>
+                    {% for duty in duties %}
+                        <li>{{ duty }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div id="certifications">
+        <h1>Certifications</h1>
+        {% for cert in certs %}
+            <div class='certification'>";
+                {{ certification.certification }}<br/>
+                {{ certification.start }} - {{ certification.end }}<br/>
+                {{ certification.organization }};
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+body {
+    font-family:'comic sans ms';
+    color:#ff0080;
+    background-image:url(../best-viewed.jpg),
+        url(https://freerangestock.com/sample/85966/laser-circuit-background-shows-electrical-art-and-technology-tre.jpg);
+    background-repeat: no-repeat, repeat;
+    background-position:top left, top left;
+    text-align:center;
+}
+
+body::before { color:gold; font-size:xx-large; content: 'Hey! Look at my resume!'; }
+
+#header h1 { animation:color-change 1s infinite; 
+    -webkit-animation: color-change 1s infinite; }
+
+@keyframes color-change {
+    0% { color:red; }
+    14% { color:orange; }
+    28% { color:yellow; }
+    42% { color:green; }
+    56% { color:blue; }
+    70% { color: indigo; }
+    85% { color: violet; }
+    100% { color:red; }
+}
+
+@-webkit-keyframes color-change {
+    0% { color:red; }
+    14% { color:orange; }
+    28% { color:yellow; }
+    42% { color:green; }
+    56% { color:blue; }
+    70% { color: indigo; }
+    85% { color: violet; }
+    100% { color:red; }
+}
+
+#jobs h1 { animation:color-change 1s infinite; 
+    -webkit-animation: color-change 1s infinite; 
+    animation-delay: 14ms; 
+}
+
+#education h1 { animation:color-change 1s infinite; 
+    -webkit-animation: color-change 1s infinite; 
+    animation-delay: 28ms;}
+#certifications h1 { animation:color-change 1s infinite; 
+    -webkit-animation: color-change 1s infinite;
+    animation-delay: 42ms; }
+
+.jobs, .education, .certifications div { color:hotpink; }
