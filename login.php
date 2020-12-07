@@ -15,7 +15,7 @@ if(isset($_POST['submit']) && $_POST['submit']=="submit") {
         exit;
     }
 
-    $query = "SELECT id,username FROM tblUsers WHERE username='".$_POST['username']."' AND password='".$_POST['password']."'";
+    $query = "SELECT id,username FROM tblUsers WHERE username='".$_POST['username']."' AND `password`='".password_hash($_POST['password'],PASSWORD_DEFAULT)."'";
     $result = $link->query($query);
 
     if($result->num_rows==1) {
@@ -35,20 +35,15 @@ if(isset($_POST['submit']) && $_POST['submit']=="submit") {
 ?>
 
 <html>
+<?php
+		$title = "Rezoom - Login";
+		include("head.php");
+	?>
 <body>
-    <header style="width:100%;" class="subpage-header">
-        <nav style="display:flex; justify-content:space-between;">
-            <a href="index.php">Home</a>
-            <div>
-                <a href="login.php">Login</a>
-                <a href="register.php">Register</a>
-                <a href="faq.php">FAQ</a>
-            </div>
-        </nav>
-    </header>
+    <?php include("nav.php"); ?>
     <form action="#" method="post">
         <label for="username">Username</label><input type="text" value="" name="username" id="username">
-        <label for="password">Password</label><input type="text" value="" name="password" id="password">
+        <label for="password">Password</label><input type="password" value="" name="password" id="password">
         <button name="submit" value="submit">Submit</button>
     </form>
 </body>

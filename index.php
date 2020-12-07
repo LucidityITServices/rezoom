@@ -6,25 +6,12 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
-	<head>
-		<title>Prism by TEMPLATED</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
+	<?php
+		$title = "Rezoom - A Better Way To Resumé";
+		include("head.php");
+	?>
 	<body>
-		    <header style="width:100%;">
-        <nav style="display:flex; justify-content:space-between;">
-            <a href="index.php">Home</a>
-            <div>
-                                            <a href="login.php">Login</a>
-                            <a href="register.php">Register</a>
-                                        <a href="faq.php">FAQ</a>
-            </div>
-        </nav>
-    </header>		<!-- Banner -->
+		<?php include("nav.php"); ?>
 		<section id="banner">
 			<div class="inner split">
 				<section>

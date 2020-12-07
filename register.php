@@ -30,22 +30,13 @@ if($_POST['submit']=="submit") {
 ?>
 
 <html>
-<head>
-    <link rel="stylesheet" href="css/main.css">
-
-</head>
+<?php
+		$title = "Rezoom - Sign Up";
+		include("head.php");
+	?>
 <body>
-    <header style="width:100%;" class="subpage-header">
-        <nav style="display:flex; justify-content:space-between;">
-            <a href="index.php">Home</a>
-            <div>
-                <a href="login.php">Login</a>
-                <a href="register.php">Register</a>
-                <a href="faq.php">FAQ</a>
-            </div>
-        </nav>
-    </header>
     <?php
+        include("nav.php");
         if(strlen($error)) { echo $error; }
     ?>
     <form action="#" method="post">

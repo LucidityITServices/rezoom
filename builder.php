@@ -29,17 +29,12 @@
 ?>
 
 <html>
+<?php
+		$title = "Rezoom - Profile Builder";
+		include("head.php");
+	?>
 <body>
-    <header style="width:100%;" class="subpage-header">
-        <nav style="display:flex; justify-content:space-between;">
-            <a href="index.php">Home</a>
-            <div>
-                <a href="login.php">Login</a>
-                <a href="register.php">Register</a>
-                <a href="faq.php">FAQ</a>
-            </div>
-        </nav>
-    </header>
+    <?php include("nav.php"); ?>
     <form action="#" method="post">
         <table>
             <tr><th>Type</th><th>Value</th><th>Lang</th></tr>
