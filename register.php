@@ -22,6 +22,7 @@ if($_POST['submit']=="submit") {
     else { 
         $query = "INSERT INTO tblUsers (username,`password`) VALUES ('".$_POST['username']."','".password_hash($_POST['password'],PASSWORD_DEFAULT)."');";
         $result = $link->query($query);
+        echo "Registration successful";
     }
 
     mysqli_close($link);
