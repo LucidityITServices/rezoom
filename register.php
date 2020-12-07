@@ -32,6 +32,7 @@ if($_POST['submit']=="submit") {
 <html>
 <head>
     <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
     <header style="width:100%;" class="subpage-header">
@@ -48,9 +49,9 @@ if($_POST['submit']=="submit") {
         if(strlen($error)) { echo $error; }
     ?>
     <form action="#" method="post">
-        <input type="text" value="" name="username" id="username">
-        <input type="text" value="" name="password" id="password">
-        <button name="submit" value="submit">Submit</button>
+        <label for="username">Username: <input type="text" class="form-control" value="" name="username" id="username"></label>
+        <label for="password">Password: <input type="text" class="form-control" value="" name="password" id="password"></label>
+        <button name="submit" class="btn btn-primary" value="submit">Submit</button>
     </form>
 </body>
 </html>
