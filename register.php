@@ -27,6 +27,7 @@ if($_POST['submit']=="submit") {
 
     mysqli_close($link);
 }
+else { echo "???"; }
 ?>
 
 <html>
@@ -39,7 +40,7 @@ if($_POST['submit']=="submit") {
         include("nav.php");
         if(strlen($error)) { echo $error; }
     ?>
-    <form action="#" method="post">
+    <form action="register.php" method="post">
         <label for="username">Username: <input type="text" class="form-control" value="" name="username" id="username"></label>
         <label for="password">Password: <input type="password" class="form-control" value="" name="password" id="password"></label>
         <button name="submit" class="btn btn-primary" value="submit">Submit</button>
