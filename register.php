@@ -23,7 +23,7 @@ if($_POST['submit']=="submit") {
         $username = $_POST['username'];
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO tblUsers (username,`password`) VALUES ('$username','$password');";
+        $query = "INSERT INTO tblusers (username,`password`) VALUES ('$username','$password');";
         $result = $link->query($query) or die("reg failed");
         echo "Registration successful";
     }
