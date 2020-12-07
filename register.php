@@ -20,8 +20,11 @@ if($_POST['submit']=="submit") {
         $error = "That username is already in use.";
     }
     else { 
-        $query = "INSERT INTO tblUsers (username,`password`) VALUES ('".$_POST['username']."','".password_hash($_POST['password'],PASSWORD_DEFAULT)."');";
-        $result = $link->query($query);
+        $username = $_POST['username'];
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+        $query = "INSERT INTO tblUsers (username,`password`) VALUES ('$username','$password');";
+        $result = $link->query($query) or die("reg failed");
         echo "Registration successful";
     }
 
