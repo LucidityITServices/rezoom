@@ -29,6 +29,16 @@ if($_GET['submit']=="submit")
 
 <html>
 <body>
+    <header style="width:100%;" class="subpage-header">
+        <nav style="display:flex; justify-content:space-between;">
+            <a href="index.php">Home</a>
+            <div>
+                <a href="login.php">Login</a>
+                <a href="register.php">Register</a>
+                <a href="faq.php">FAQ</a>
+            </div>
+        </nav>
+    </header>
     <form action="#" method="get">
         <input type="text" value="" name="username" id="username">
         <input type="text" value="" name="password" id="password">

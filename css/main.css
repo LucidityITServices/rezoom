@@ -2421,6 +2421,13 @@
 	header { position:absolute; }
 	header a { color:white; font-weight:bold; text-decoration: none; float:right; margin:0 20px; }
 
+/* Header (other pages) */
+	header.subpage-header{ background:url("images/overlay.png"), -moz-linear-gradient(45deg, #4A4771 0%, #7C3875 100%);
+		background:url("images/overlay.png"), linear-gradient(45deg, #4A4771 0%, #7C3875 100%);
+		background:url("images/overlay.png"), -webkit-linear-gradient(45deg, #4A4771 0%, #7C3875 100%);
+		background:url("images/overlay.png"), -ms-linear-gradient(45deg, #4A4771 0%, #7C3875 100%);
+	}
+
 /* Section/Article */
 	section.special, article.special { text-align: center; }
 	
